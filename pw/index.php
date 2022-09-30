@@ -17,25 +17,26 @@
 </head>
 
 <body>
+    <div class="container">
+        <div class="row gap-3 justify-content-center my-5">
+            <h1 class="text-center mb-4">Daftar Buku</h1>
+            <?php $i = 1; ?>
+            <?php foreach($daftar_buku as $buku) : ?>
+            <div class="card shadow-sm p-4">
+                <img src="../assets/image/<?= $buku["gambar"]; ?>" class="card-img-top" alt="...">
+                <div class="card-body pt-2 px-0">
+                    <h5 class="card-title text-truncate"><?= $buku["judul_buku"]; ?></h5>
+                    <p class="card-text"><?= $buku["pengarang"]; ?></p>
 
-    <div class="row gap-3 justify-content-center my-5">
-
-        <?php $i = 1; ?>
-        <?php foreach($daftar_buku as $buku) : ?>
-        <div class="card shadow-sm p-4">
-            <img src="../assets/image/<?= $buku["gambar"]; ?>" class="card-img-top" alt="...">
-            <div class="card-body pt-2 px-0">
-                <h5 class="card-title text-truncate"><?= $buku["judul_buku"]; ?></h5>
-                <p class="card-text"><?= $buku["pengarang"]; ?></p>
-
-                <div class="text-center mt-4">
-                    <a href="detail.php?id=<?= $buku["id"]; ?>" class="btn btn-primary">Lihat Detail</a>
+                    <div class="text-center mt-4">
+                        <a href="detail.php?id=<?= $buku["id"]; ?>" class="btn btn-primary">Lihat Detail</a>
+                    </div>
                 </div>
             </div>
-        </div>
-        <?php $i++; ?>
-        <?php endforeach ?>
+            <?php $i++; ?>
+            <?php endforeach ?>
 
+        </div>
     </div>
 
     <!-- Bootstrap -->
