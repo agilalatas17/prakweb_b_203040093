@@ -19,7 +19,7 @@
 <body>
     <div class="container">
         <div class="row gap-3 justify-content-center my-5">
-            <h1 class="text-center mb-4">Daftar Buku</h1>
+            <h1 class="text-center mb-4 text-light">Daftar Buku</h1>
             <?php $i = 1; ?>
             <?php foreach($daftar_buku as $buku) : ?>
             <div class="card shadow-sm p-4">
