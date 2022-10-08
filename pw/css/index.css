@@ -1,0 +1,36 @@
+body {
+  font-family: Montserrat;
+  font-size: 18px;
+}
+
+table td {
+  height: 300px;
+}
+
+/* table */
+.id-buku p,
+.judul-buku p {
+  margin: 8px !important;
+}
+
+.img-wrapper {
+  width: 177px;
+  height: 236px;
+}
+
+.img-wrapper img {
+  width: inherit;
+  height: inherit;
+}
+
+.judul-buku p {
+  text-decoration: none;
+  line-height: 1.5;
+  color: #000;
+  height: inherit;
+}
+
+.btn-detail-buku .btn {
+  font-size: 12px !important;
+  margin-right: 30px;
+}
