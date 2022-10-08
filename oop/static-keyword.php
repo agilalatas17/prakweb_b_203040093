@@ -5,6 +5,11 @@
     Untuk Apa ?
         - Member (properti dan method) yang terikat dengan class, bukan dengan object
         - Nilai static akan selalu tetap meskipun object di instansiasi berulang kali
+        - Membuat kode menjadi 'prosedural'
+
+    Kapan digunakan ?
+        - Biasanya digunakan untuk membuat fungsi bantuan / helper
+        - Atau digunakan di class-class utility pada framework
 */
 
 class ContohStatic {
