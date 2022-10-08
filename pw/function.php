@@ -91,5 +91,44 @@
         move_uploaded_file($tmpName, '../pw/assets/image/' . $newFileName);
         return $newFileName;
     }
+
+    // Function Ubah Data
+    function ubah($data) {
+        $conn = koneksi_db();
+
+        $id = htmlspecialchars ($data['id']);
+        $gambar = htmlspecialchars ($data['gambar']);
+        $gambarLama = htmlspecialchars ($data['gambarLama']);
+        $judul_buku = htmlspecialchars ($data['judul_buku']);
+        $sinopsis = htmlspecialchars ($data['sinopsis']);
+        $pengarang = htmlspecialchars ($data['pengarang']);
+        $penerbit = htmlspecialchars ($data['penerbit']);
+        $tahun_terbit = htmlspecialchars ($data['tahun_terbit']);
+        $harga = htmlspecialchars ($data['harga']);
+
+        // cek user upload gambar baru atau tidak
+        if($_FILES['gambar']['error'] === 4) {
+            $gambar = $gambarLama;
+        } else {
+            $gambar = upload();
+        }
+
+        //query update data
+        $query = "UPDATE buku
+                SET
+                gambar = '$gambar',
+                judul_buku = '$judul_buku',
+                sinopsis = '$sinopsis',
+                pengarang = '$pengarang',
+                penerbit = '$penerbit',
+                tahun_terbit = $tahun_terbit,
+                harga = '$harga'
+                WHERE id = '$id'
+                ";
+
+        mysqli_query($conn, $query);
+
+        return mysqli_affected_rows($conn);
+    }
    
 ?>

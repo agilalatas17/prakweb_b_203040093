@@ -25,9 +25,12 @@
 
 <body>
     <div class="container">
-        <div class="wrapper-cta my-3">
-            <div class="go-to-admin-page my-3">
+        <div class="wrapper-cta my-3 d-flex gap-3">
+            <div>
                 <a href="./pages/tambah.php" class="btn btn-success">Tambah Data Buku</a>
+            </div>
+            <div>
+                <a href="./pages/ubah.php" class="btn btn-warning text-white">Ubah Data Buku</a>
             </div>
         </div>
 
